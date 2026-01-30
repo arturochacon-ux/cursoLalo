@@ -1,8 +1,8 @@
 
-
-
 import { Control } from "./controler/controller";
 import { Linea } from "./entytis/linaDelMetro-entity";
+/*¿
+
 //linea cafe 9 
 let tacubaya = new Linea("Tacubaya");
 let patriotismo = new Linea("Patriotismo");
@@ -260,45 +260,65 @@ generalAnaya.agregarEstacion(ermita);
 generalAnaya.agregarEstacion(taxquena);
 taxquena.agregarEstacion(generalAnaya);
 
-// vecinos de la linea dorada 
+// --- LÍNEA 12 (DORADA) ---
+
 tlahuac.agregarEstacion(tlaltenco);
 tlaltenco.agregarEstacion(tlahuac);
+
 tlaltenco.agregarEstacion(zapotitlan);
 zapotitlan.agregarEstacion(tlaltenco);
+
 zapotitlan.agregarEstacion(nopalera);
 nopalera.agregarEstacion(zapotitlan);
+
 nopalera.agregarEstacion(olivos);
 olivos.agregarEstacion(nopalera);
+
 olivos.agregarEstacion(tezonco);
 tezonco.agregarEstacion(olivos);
+
 tezonco.agregarEstacion(perifericoOriente);
 perifericoOriente.agregarEstacion(tezonco);
+
 perifericoOriente.agregarEstacion(calle11);
 calle11.agregarEstacion(perifericoOriente);
+
 calle11.agregarEstacion(lomasEstrella);
 lomasEstrella.agregarEstacion(calle11);
+
 lomasEstrella.agregarEstacion(sanAndresTomatlan);
 sanAndresTomatlan.agregarEstacion(lomasEstrella);
+
 sanAndresTomatlan.agregarEstacion(culhuacan);
 culhuacan.agregarEstacion(sanAndresTomatlan);
+
 culhuacan.agregarEstacion(atlalilco);
 atlalilco.agregarEstacion(culhuacan);
-atlalilco.agregarEstacion(ejeCentral);
-ejeCentral.agregarEstacion(atlalilco);
-ejeCentral.agregarEstacion(mexicaltzingo);
-mexicaltzingo.agregarEstacion(ejeCentral);
+
+atlalilco.agregarEstacion(mexicaltzingo);
+mexicaltzingo.agregarEstacion(atlalilco);
+
 mexicaltzingo.agregarEstacion(ermita);
 ermita.agregarEstacion(mexicaltzingo);
-ermita.agregarEstacion(parqueDeLosVenados);
-parqueDeLosVenados.agregarEstacion(ermita);
+
+ermita.agregarEstacion(ejeCentral);
+ejeCentral.agregarEstacion(ermita);
+
+ejeCentral.agregarEstacion(parqueDeLosVenados);
+parqueDeLosVenados.agregarEstacion(ejeCentral);
+
 parqueDeLosVenados.agregarEstacion(zapata);
 zapata.agregarEstacion(parqueDeLosVenados);
+
 zapata.agregarEstacion(hospital20Nov);
 hospital20Nov.agregarEstacion(zapata);
+
 hospital20Nov.agregarEstacion(insurgentesSur);
 insurgentesSur.agregarEstacion(hospital20Nov);
+
 insurgentesSur.agregarEstacion(mixcoac);
 mixcoac.agregarEstacion(insurgentesSur);
+
 
 /// linea 8
 garibaldi8.agregarEstacion(bellasArtes)
@@ -370,4 +390,41 @@ lineasDelMetro.set(1, [
 ]);
 
 let control = new Control(lineasDelMetro);
+control.iniciar()*/
+
+
+const lineasMetro = {
+    L1: ["Observatorio", "Tacubaya", "Juanacatlán", "Chapultepec", "Sevilla", "Insurgentes", "Cuauhtémoc", "Balderas", "Salto del Agua", "Isabel la Católica", "Pino Suárez", "Merced", "Candelaria", "San Lázaro", "Moctezuma", "Balbuena", "Boulevard Puerto Aéreo", "Gómez Farías", "Zaragoza", "Pantitlán"],
+    L2: ["Cuatro Caminos", "Panteones", "Tacuba", "Cuitláhuac", "Popotla", "Colegio Militar", "Normal", "San Cosme", "Revolución", "Hidalgo", "Bellas Artes", "Allende", "Zócalo", "Pino Suárez", "San Antonio Abad", "Chabacano", "Viaducto", "Xola", "Villa de Cortés", "Nativitas", "Portales", "Ermita", "General Anaya", "Taxqueña"],
+    L3: ["Indios Verdes", "Deportivo 18 de Marzo", "Potrero", "La Raza", "Tlatelolco", "Guerrero", "Hidalgo", "Juárez", "Balderas", "Niños Héroes", "Hospital General", "Centro Médico", "Etiopía", "Eugenia", "División del Norte", "Zapata", "Coyoacán", "Viveros", "Miguel Ángel de Quevedo", "Copilco", "Universidad"],
+    L4: ["Martín Carrera", "Talismán", "Bondojito", "Consulado", "Canal del Norte", "Morelos", "Candelaria", "Fray Servando", "Jamaica", "Santa Anita"],
+    L5: ["Politécnico", "Instituto del Petróleo", "Autobuses del Norte", "La Raza", "Misterios", "Valle Gómez", "Consulado", "Eduardo Molina", "Aragón", "Oceanía", "Terminal Aérea", "Hangares", "Pantitlán"],
+    L6: ["El Rosario", "Tezozómoc", "Azcapotzalco", "Ferrería", "Norte 45", "Vallejo", "Instituto del Petróleo", "Lindavista", "Deportivo 18 de Marzo", "La Villa-Basílica", "Martín Carrera"],
+    L7: ["El Rosario", "Aquiles Serdán", "Camarones", "Refinería", "Tacuba", "San Joaquín", "Polanco", "Auditorio", "Constituyentes", "Tacubaya", "San Pedro de los Pinos", "San Antonio", "Mixcoac", "Barranca del Muerto"],
+    L8: ["Garibaldi", "Bellas Artes", "San Juan de Letrán", "Salto del Agua", "Doctores", "Obrera", "Chabacano", "La Viga", "Santa Anita", "Coyuya", "Iztacalco", "Apatlaco", "Aculco", "Escuadrón 201", "Atlalilco", "Iztapalapa", "Cerro de la Estrella", "UAM-I", "Constitución de 1917"],
+    L9: ["Tacubaya", "Patriotismo", "Chilpancingo", "Centro Médico", "Lázaro Cárdenas", "Chabacano", "Jamaica", "Mixiuhca", "Velódromo", "Ciudad Deportiva", "Puebla", "Pantitlán"],
+    LA: ["Pantitlán", "Agrícola Oriental", "Canal de San Juan", "Tepalcates", "Guelatao", "Peñón Viejo", "Acatitla", "Santa Marta", "Los Reyes", "La Paz"],
+    LB: ["Buenavista", "Guerrero", "Garibaldi", "Lagunilla", "Tepito", "Morelos", "San Lázaro", "Ricardo Flores Magón", "Romero Rubio", "Oceanía", "Deportivo Oceanía", "Bosque de Aragón", "Villa de Aragón", "Nezahualcóyotl", "Impulsora", "Río de los Remedios", "Múzquiz", "Ecatepec", "Olímpica", "Plaza Aragón", "Ciudad Azteca"],
+    L12: ["Mixcoac", "Insurgentes Sur", "Hospital 20 de Noviembre", "Zapata", "Parque de los Venados", "Eje Central", "Ermita", "Mexicaltzingo", "Atlalilco", "Culhuacán", "San Andrés Tomatlán", "Lomas Estrella", "Calle 11", "Periférico Oriente", "Tezonco", "Olivos", "Nopalera", "Zapotitlán", "Tlaltenco", "Tláhuac"]
+};
+
+const redMetro = new Map<string, Linea>();
+
+function generarRedCompleta() {
+    Object.values(lineasMetro).forEach(estaciones => {
+        estaciones.forEach((nombre, i) => {
+            if (!redMetro.has(nombre)) {
+                redMetro.set(nombre, new Linea(nombre));
+            }
+            if (i > 0) {
+                const actual = redMetro.get(nombre)!;
+                const anterior = redMetro.get(estaciones[i - 1])!;
+                actual.agregarEstacion(anterior);
+                anterior.agregarEstacion(actual);
+            }
+        });
+    });
+}
+
+let control = new Control(redMetro);
 control.iniciar()

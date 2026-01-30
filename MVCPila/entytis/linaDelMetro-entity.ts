@@ -18,10 +18,10 @@ export class Linea {
             console.log(contador.estacion)
     }
 
-    mejorRuta(voyA: Linea, pila: Linea[], estacionAanterior: Linea, hashmap: Map<string, Linea>, posiblesRutas: ListasRutas): Linea[] {
+    mejorRuta(voyA: Linea, pila: Linea[], hashmap: Map<string, Linea>, posiblesRutas: ListasRutas) {
 
-        if (hashmap.has(this.estacion)) {
-            return pila;
+        if (hashmap.has(this.estacion) == true) {
+            return
         }
         pila.push(this);
         hashmap.set(this.estacion, this);
@@ -30,24 +30,20 @@ export class Linea {
             for (let contador of pila) {
                 console.log(contador.estacion);
             }
-            posiblesRutas.agregarRuta(pila)
-            return pila;
+            posiblesRutas.agregarRuta([...pila])
+            return
         }
 
         for (let contador = 0; contador < this.colindaCon.length; contador++) {
-            let estacionSiguiente = this.colindaCon[contador];
-            if (estacionSiguiente.estacion !== estacionAanterior?.estacion) {
-                let resultado = estacionSiguiente.mejorRuta(voyA, pila, this, hashmap, posiblesRutas);
-                if (resultado.at(resultado.length - 1) == voyA) {
-                    //guardaRutas.agregarRuta(resultado)
-                    return resultado;
-                }
+            let nodo = this.colindaCon[contador]
+            if (nodo != undefined) {
+                nodo.mejorRuta(voyA, pila, hashmap, posiblesRutas)
             }
+
         }
         pila.pop();
         hashmap.delete(this.estacion);
-        posiblesRutas.agregarRuta(pila)
-        return pila;
+        return
 
     }
 

@@ -2,9 +2,7 @@
 import scanf from "scanf";
 import { Linea } from "../entytis/linaDelMetro-entity";
 import { Menu } from "../view/viasta";
-import { lineasDelMetro } from "..";
 import { ListasRutas } from "../entytis/listasRutas";
-import { listaRutas } from "../entytis/prueba";
 
 export class Control {
     menu = new Menu();
@@ -84,7 +82,8 @@ export class Control {
                     var posiblesRutas = new ListasRutas()
                     inicio?.mejorRuta(destino, new Array(), /*undefined,*/ new Map<string, Linea>(), posiblesRutas)
                     console.log("estas son las posibles rutas XD" )
-                    posiblesRutas.mostrarRutas()
+                    console.log(posiblesRutas.rutaMasCorta())
+                    
 
                 break;
 
