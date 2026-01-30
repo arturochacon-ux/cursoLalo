@@ -1,0 +1,373 @@
+
+
+
+import { Control } from "./controler/controller";
+import { Linea } from "./entytis/linaDelMetro-entity";
+//linea cafe 9 
+let tacubaya = new Linea("Tacubaya");
+let patriotismo = new Linea("Patriotismo");
+let chilpancingo = new Linea("Chilpancingo");
+let centroMedico = new Linea("Centro Médico");
+let lazaroCardenas = new Linea("Lázaro Cárdenas");
+let chabacano = new Linea("Chabacano");
+let jamaica = new Linea("Jamaica");
+let mixiuhca = new Linea("Mixiuhca");
+let velodromo = new Linea("Velódromo");
+let ciudadDeportiva = new Linea("Ciudad Deportiva");
+let puebla = new Linea("Puebla");
+let pantitlan = new Linea("Pantitlán");
+
+// linea azul 2
+let cuatroCaminos = new Linea("Cuatro Caminos");
+let panteones = new Linea("Panteones");
+let tacuba = new Linea("Tacuba");
+let cuitlahuac = new Linea("Cuitláhuac");
+let popotla = new Linea("Popotla");
+let colegioMilitar = new Linea("Colegio Militar");
+let normal = new Linea("Normal");
+let sanCosme = new Linea("San Cosme");
+let revolucion = new Linea("Revolución");
+let hidalgo = new Linea("Hidalgo");
+let bellasArtes = new Linea("Bellas Artes");
+let allende = new Linea("Allende");
+let zocalo = new Linea("Zócalo");
+let pinoSuarez = new Linea("Pino Suárez");
+let sanAntonioAbad = new Linea("San Antonio Abad");
+let viaducto = new Linea("Viaducto");
+let xola = new Linea("Xola");
+let villaCortes = new Linea("Villa de Cortés");
+let nativitas = new Linea("Nativitas");
+let portales = new Linea("Portales");
+let ermita = new Linea("Ermita");
+let generalAnaya = new Linea("General Anaya");
+let taxquena = new Linea("Taxqueña");
+
+// linea dorada 12
+let tlahuac = new Linea("Tláhuac");
+let tlaltenco = new Linea("Tlaltenco");
+let zapotitlan = new Linea("Zapotitlán");
+let nopalera = new Linea("Nopalera");
+let olivos = new Linea("Olivos");
+let tezonco = new Linea("Tezonco");
+let perifericoOriente = new Linea("Periférico Oriente");
+let calle11 = new Linea("Calle 11");
+let lomasEstrella = new Linea("Lomas Estrella");
+let sanAndresTomatlan = new Linea("San Andrés Tomatlán");
+let culhuacan = new Linea("Culhuacán");
+let atlalilco = new Linea("Atlalilco");
+let ejeCentral = new Linea("Eje Central");
+let mexicaltzingo = new Linea("Mexicaltzingo");
+let parqueDeLosVenados = new Linea("Parque de los Venados");
+let zapata = new Linea("Zapata");
+let hospital20Nov = new Linea("Hospital 20 de Noviembre");
+let insurgentesSur = new Linea("Insurgentes Sur");
+let mixcoac = new Linea("Mixcoac");
+
+// linea rosa 1
+let observatorio = new Linea("Observatorio");
+let tacubaya1 = new Linea("Tacubaya");
+let juanacatlan = new Linea("Juanacatlán");
+let chapultepec = new Linea("Chapultepec");
+let sevilla = new Linea("Sevilla");
+let insurgentes1 = new Linea("Insurgentes");
+let cuauhtemoc = new Linea("Cuauhtémoc");
+let balderas1 = new Linea("Balderas");
+let saltoDelAgua1 = new Linea("Salto del Agua");
+let isabelLaCatolica = new Linea("Isabel la Católica");
+let pinoSuarez1 = new Linea("Pino Suárez");
+let merced = new Linea("Merced");
+let candelaria1 = new Linea("Candelaria");
+let sanLazaro1 = new Linea("San Lázaro");
+let moctezuma = new Linea("Moctezuma");
+let balbuena = new Linea("Balbuena");
+let boulevardPuertoAereo = new Linea("Boulevard Puerto Aéreo");
+let gomezFarias = new Linea("Gómez Farías");
+let zaragoza = new Linea("Zaragoza");
+let pantitlan1 = new Linea("Pantitlán L1");
+
+// linea arena 3
+let indiosVerdes = new Linea("Indios Verdes");
+let deportivo18Marzo3 = new Linea("Deportivo 18 de Marzo L3");
+let potrero = new Linea("Potrero");
+let laRaza3 = new Linea("La Raza L3");
+let tlatelolco = new Linea("Tlatelolco");
+let guerrero3 = new Linea("Guerrero L3");
+let hidalgo3 = new Linea("Hidalgo L3");
+let juarez = new Linea("Juárez");
+let balderas3 = new Linea("Balderas L3");
+let ninosHeroes = new Linea("Niños Héroes");
+let hospitalGeneral = new Linea("Hospital General");
+let centroMedico3 = new Linea("Centro Médico L3");
+let etiopia = new Linea("Etiopía");
+let eugenia = new Linea("Eugenia");
+let divisionDelNorte = new Linea("División del Norte");
+let zapata3 = new Linea("Zapata");
+let coyoacan = new Linea("Coyoacán");
+let viveros = new Linea("Viveros");
+let miguelAngelDeQuevedo = new Linea("Miguel Ángel de Quevedo");
+let copilco = new Linea("Copilco");
+let universidad = new Linea("Universidad");
+
+// linea turqueza 4 
+let martinCarrera4 = new Linea("Martín Carrera L4");
+let talisman = new Linea("Talisman");
+let bondojito = new Linea("Bondojito");
+let consulado4 = new Linea("Consulado L4");
+let canalDelNorte = new Linea("Canal del Norte");
+let morelos4 = new Linea("Morelos L4");
+let candelaria4 = new Linea("Candelaria L4");
+let frayServando = new Linea("Fray Servando");
+let jamaica4 = new Linea("Jamaica L4");
+let santaAnita4 = new Linea("Santa Anita L4");
+
+//
+let politecnico = new Linea("Politécnico");
+let institutoDelPetroleo5 = new Linea("Instituto del Petróleo L5");
+let autobusesNorte = new Linea("Autobuses del Norte");
+let laRaza5 = new Linea("La Raza L5");
+let misterios = new Linea("Misterios");
+let valleGomez = new Linea("Valle Gómez");
+let consulado5 = new Linea("Consulado L5");
+let eduardoMolina = new Linea("Eduardo Molina");
+let aragon = new Linea("Aragón");
+let oceanía5 = new Linea("Oceanía L5");
+let terminalAerea = new Linea("Terminal Aérea");
+let hangares = new Linea("Hangares");
+let pantitlan5 = new Linea("Pantitlán L5");
+
+//
+let elRosario6 = new Linea("El Rosario L6");
+let tezozomoc = new Linea("Tezozómoc");
+let azcapotzalco6 = new Linea("Azcapotzalco");
+let ferreria = new Linea("Ferrería");
+let norte45 = new Linea("Norte 45");
+let vallejo = new Linea("Vallejo");
+let institutoDelPetroleo6 = new Linea("Instituto del Petróleo L6");
+let lindavista = new Linea("Lindavista");
+let deportivo18Marzo6 = new Linea("Deportivo 18 de Marzo L6");
+let laVillaBasílica = new Linea("La Villa–Basílica");
+let martinCarrera6 = new Linea("Martín Carrera L6");
+
+//
+let elRosario7 = new Linea("El Rosario L7");
+let aquilesSerdan = new Linea("Aquiles Serdán");
+let camarones = new Linea("Camarones");
+let refineria = new Linea("Refinería");
+let tacuba7 = new Linea("Tacuba L7");
+let sanJoaquin = new Linea("San Joaquín");
+let polanco = new Linea("Polanco");
+let auditorio = new Linea("Auditorio");
+let constituyentes = new Linea("Constituyentes");
+let tacubaya7 = new Linea("Tacubaya L7");
+let sanPedroDeLosPinos = new Linea("San Pedro de los Pinos");
+let sanAntonio = new Linea("San Antonio");
+let mixcoac7 = new Linea("Mixcoac L7");
+let barrancaDelMuerto = new Linea("Barranca del Muerto");
+
+//
+let garibaldi8 = new Linea("Garibaldi L8");
+let bellasArtes8 = new Linea("Bellas Artes L8");
+let sanJuanDeLetran = new Linea("San Juan de Letrán");
+let saltoDelAgua8 = new Linea("Salto del Agua L8");
+let doctores = new Linea("Doctores");
+let obrera = new Linea("Obrera");
+let chabacano8 = new Linea("Chabacano L8");
+let laViga = new Linea("La Viga");
+let santaAnita8 = new Linea("Santa Anita L8");
+let coyuya = new Linea("Coyuya");
+let iztacalco = new Linea("Iztacalco");
+let apatlalco = new Linea("Apatlaco");
+let aculco = new Linea("Aculco");
+let escuadron201 = new Linea("Escuadrón 201");
+let atlalilco8 = new Linea("Atlalilco L8");
+let iztapalapa = new Linea("Iztapalapa");
+let cerroDeLaEstrella = new Linea("Cerro de la Estrella");
+let uamI = new Linea("UAM-I");
+let constitucion1917 = new Linea("Constitución de 1917");
+
+
+// vecinos lina cafe
+tacubaya.agregarEstacion(patriotismo);
+patriotismo.agregarEstacion(tacubaya);
+patriotismo.agregarEstacion(chilpancingo);
+chilpancingo.agregarEstacion(patriotismo);
+chilpancingo.agregarEstacion(centroMedico);
+centroMedico.agregarEstacion(chilpancingo);
+centroMedico.agregarEstacion(lazaroCardenas);
+lazaroCardenas.agregarEstacion(centroMedico);
+lazaroCardenas.agregarEstacion(chabacano);
+chabacano.agregarEstacion(sanAntonioAbad);
+chabacano.agregarEstacion(viaducto);
+chabacano.agregarEstacion(lazaroCardenas);
+chabacano.agregarEstacion(jamaica);
+chabacano.agregarEstacion(obrera);
+chabacano.agregarEstacion(laViga);
+jamaica.agregarEstacion(chabacano);
+jamaica.agregarEstacion(mixiuhca);
+mixiuhca.agregarEstacion(jamaica);
+mixiuhca.agregarEstacion(velodromo);
+velodromo.agregarEstacion(mixiuhca);
+velodromo.agregarEstacion(ciudadDeportiva);
+ciudadDeportiva.agregarEstacion(velodromo);
+ciudadDeportiva.agregarEstacion(puebla);
+puebla.agregarEstacion(ciudadDeportiva);
+puebla.agregarEstacion(pantitlan);
+pantitlan.agregarEstacion(puebla);
+
+// vecinos linea azul 
+cuatroCaminos.agregarEstacion(panteones);
+panteones.agregarEstacion(cuatroCaminos);
+panteones.agregarEstacion(tacuba);
+tacuba.agregarEstacion(panteones);
+tacuba.agregarEstacion(cuitlahuac);
+cuitlahuac.agregarEstacion(tacuba);
+cuitlahuac.agregarEstacion(popotla);
+popotla.agregarEstacion(cuitlahuac);
+popotla.agregarEstacion(colegioMilitar);
+colegioMilitar.agregarEstacion(popotla);
+colegioMilitar.agregarEstacion(normal);
+normal.agregarEstacion(colegioMilitar);
+normal.agregarEstacion(sanCosme);
+sanCosme.agregarEstacion(normal);
+sanCosme.agregarEstacion(revolucion);
+revolucion.agregarEstacion(sanCosme);
+revolucion.agregarEstacion(hidalgo);
+hidalgo.agregarEstacion(revolucion);
+hidalgo.agregarEstacion(bellasArtes);
+bellasArtes.agregarEstacion(hidalgo);
+bellasArtes.agregarEstacion(allende);
+allende.agregarEstacion(bellasArtes);
+allende.agregarEstacion(zocalo);
+zocalo.agregarEstacion(allende);
+zocalo.agregarEstacion(pinoSuarez);
+pinoSuarez.agregarEstacion(zocalo);
+pinoSuarez.agregarEstacion(sanAntonioAbad);
+sanAntonioAbad.agregarEstacion(pinoSuarez);
+sanAntonioAbad.agregarEstacion(chabacano);
+viaducto.agregarEstacion(chabacano);
+viaducto.agregarEstacion(xola);
+xola.agregarEstacion(viaducto);
+xola.agregarEstacion(villaCortes);
+villaCortes.agregarEstacion(xola);
+villaCortes.agregarEstacion(nativitas);
+nativitas.agregarEstacion(villaCortes);
+nativitas.agregarEstacion(portales);
+portales.agregarEstacion(nativitas);
+portales.agregarEstacion(ermita);
+ermita.agregarEstacion(portales);
+ermita.agregarEstacion(generalAnaya);
+generalAnaya.agregarEstacion(ermita);
+generalAnaya.agregarEstacion(taxquena);
+taxquena.agregarEstacion(generalAnaya);
+
+// vecinos de la linea dorada 
+tlahuac.agregarEstacion(tlaltenco);
+tlaltenco.agregarEstacion(tlahuac);
+tlaltenco.agregarEstacion(zapotitlan);
+zapotitlan.agregarEstacion(tlaltenco);
+zapotitlan.agregarEstacion(nopalera);
+nopalera.agregarEstacion(zapotitlan);
+nopalera.agregarEstacion(olivos);
+olivos.agregarEstacion(nopalera);
+olivos.agregarEstacion(tezonco);
+tezonco.agregarEstacion(olivos);
+tezonco.agregarEstacion(perifericoOriente);
+perifericoOriente.agregarEstacion(tezonco);
+perifericoOriente.agregarEstacion(calle11);
+calle11.agregarEstacion(perifericoOriente);
+calle11.agregarEstacion(lomasEstrella);
+lomasEstrella.agregarEstacion(calle11);
+lomasEstrella.agregarEstacion(sanAndresTomatlan);
+sanAndresTomatlan.agregarEstacion(lomasEstrella);
+sanAndresTomatlan.agregarEstacion(culhuacan);
+culhuacan.agregarEstacion(sanAndresTomatlan);
+culhuacan.agregarEstacion(atlalilco);
+atlalilco.agregarEstacion(culhuacan);
+atlalilco.agregarEstacion(ejeCentral);
+ejeCentral.agregarEstacion(atlalilco);
+ejeCentral.agregarEstacion(mexicaltzingo);
+mexicaltzingo.agregarEstacion(ejeCentral);
+mexicaltzingo.agregarEstacion(ermita);
+ermita.agregarEstacion(mexicaltzingo);
+ermita.agregarEstacion(parqueDeLosVenados);
+parqueDeLosVenados.agregarEstacion(ermita);
+parqueDeLosVenados.agregarEstacion(zapata);
+zapata.agregarEstacion(parqueDeLosVenados);
+zapata.agregarEstacion(hospital20Nov);
+hospital20Nov.agregarEstacion(zapata);
+hospital20Nov.agregarEstacion(insurgentesSur);
+insurgentesSur.agregarEstacion(hospital20Nov);
+insurgentesSur.agregarEstacion(mixcoac);
+mixcoac.agregarEstacion(insurgentesSur);
+
+/// linea 8
+garibaldi8.agregarEstacion(bellasArtes)
+bellasArtes.agregarEstacion(garibaldi8)
+bellasArtes.agregarEstacion(sanJuanDeLetran),
+sanJuanDeLetran.agregarEstacion(bellasArtes),
+sanJuanDeLetran.agregarEstacion(saltoDelAgua8)
+saltoDelAgua8.agregarEstacion(sanJuanDeLetran)
+saltoDelAgua8.agregarEstacion(doctores) 
+doctores.agregarEstacion(saltoDelAgua8)
+doctores.agregarEstacion(obrera)
+obrera.agregarEstacion(chabacano)
+laViga.agregarEstacion(chabacano)
+laViga.agregarEstacion(santaAnita8)
+santaAnita8.agregarEstacion(laViga)
+santaAnita8.agregarEstacion(jamaica)
+santaAnita8.agregarEstacion(coyuya), 
+coyuya.agregarEstacion(iztacalco),
+coyuya.agregarEstacion(santaAnita8)
+iztacalco.agregarEstacion(coyuya) 
+iztacalco.agregarEstacion(apatlalco),
+apatlalco.agregarEstacion(iztacalco) 
+apatlalco.agregarEstacion(aculco), 
+aculco.agregarEstacion(apatlalco)
+aculco.agregarEstacion(escuadron201),
+escuadron201.agregarEstacion(aculco)
+escuadron201.agregarEstacion(atlalilco),
+atlalilco.agregarEstacion(escuadron201) 
+atlalilco.agregarEstacion(iztapalapa), 
+iztapalapa.agregarEstacion(cerroDeLaEstrella),
+iztapalapa.agregarEstacion(atlalilco)
+cerroDeLaEstrella.agregarEstacion(iztapalapa) 
+cerroDeLaEstrella.agregarEstacion(uamI),
+uamI.agregarEstacion(cerroDeLaEstrella)
+uamI.agregarEstacion(constitucion1917), 
+constitucion1917.agregarEstacion(uamI)
+
+
+
+export let lineasDelMetro = new Map<number, Linea[]>();
+lineasDelMetro.set(2, [
+    cuatroCaminos, panteones, tacuba, cuitlahuac, popotla,
+    colegioMilitar, normal, sanCosme, revolucion, hidalgo,
+    bellasArtes, allende, zocalo, pinoSuarez, sanAntonioAbad, chabacano,
+    viaducto, xola, villaCortes, nativitas, portales,
+    ermita, generalAnaya, taxquena
+]);
+
+lineasDelMetro.set(9, [
+    tacubaya, patriotismo, chilpancingo, centroMedico,
+    lazaroCardenas, chabacano, jamaica, mixiuhca,
+    velodromo, ciudadDeportiva, puebla, pantitlan,
+]);
+
+lineasDelMetro.set(12, [
+    tlahuac, tlaltenco, zapotitlan, nopalera, olivos, tezonco, perifericoOriente, calle11, lomasEstrella, sanAndresTomatlan,
+    culhuacan, atlalilco, ejeCentral, ermita, mexicaltzingo, parqueDeLosVenados, zapata, hospital20Nov, insurgentesSur, mixcoac
+]);
+
+lineasDelMetro.set(8, [
+    garibaldi8, bellasArtes, sanJuanDeLetran, saltoDelAgua8, doctores, obrera, chabacano, laViga, 
+    santaAnita8, coyuya, iztacalco, apatlalco, aculco, escuadron201, atlalilco, iztapalapa, cerroDeLaEstrella,
+    uamI, constitucion1917 
+]);
+lineasDelMetro.set(1, [
+    pantitlan1, zaragoza, gomezFarias, boulevardPuertoAereo, balbuena, moctezuma, sanLazaro1, candelaria1,
+    merced, pinoSuarez1, saltoDelAgua1, isabelLaCatolica, balderas1, cuauhtemoc, insurgentes1, sevilla, chapultepec,
+    juanacatlan, tacubaya1, observatorio
+]);
+
+let control = new Control(lineasDelMetro);
+control.iniciar()
