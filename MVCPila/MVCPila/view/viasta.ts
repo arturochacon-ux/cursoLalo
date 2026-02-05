@@ -1,14 +1,11 @@
 
 import scanf from "scanf";
 import { Validacion } from "../../MVC/entytis/validacion-entyti";
-import { ControlerMapa } from "../entytis/controlerMapa-entyti";
+
 export class Menu {
     validaciones = new Validacion()
-    controlerMapa = new ControlerMapa()
 
-
-
-    bienvenida() {
+    bienvenida(){
         console.log("\nBienvenido");
     }
 
@@ -29,44 +26,30 @@ export class Menu {
     }
 
     seleccionDeEstacion() {
-        //console.log("Ingrese el numero de la linea que le interese")
-        this.controlerMapa.todasLasLaves()
+        console.log("Ingrese el numero de la linea que le interese")
         let key = this.entradaDeOpciones()
-        let estacion = this.controlerMapa.getAllEstaciones(key)
-        if (estacion) {
-            console.log("Estas son todas las estaciones:")
-            for (let h = 0; h < estacion.length; h++) {
-                console.log(h + 1 + "-. " + estacion[h].estacion)
-            }
-        }
-        else {
-            console.log("no se encuentra esa estacion en el mapa")
-            return
-        }
+        console.log("Estas son todas las estaciones:")
         return key
     }
 
+    mostrar(){
+        console.log("Estas son todas las estaciones:")
+    }
 
     ingresaEstacionUno() {
         console.log("Ingresa el numero de la estación donde te encuentras:");
-        let linea = this.seleccionDeEstacion()
-        console.log("ingrese el numero de la estacion en la que estas")
         let estoyEn = this.entradaDeOpciones()
-        let estacio1 = this.controlerMapa.buscadorEstacion(linea, estoyEn)
-        return estacio1
+        return estoyEn
     }
 
     ingresaEstacionDos() {
         console.log("Ingresa el número de la estación a la que vas:");
-        let linea2 = this.seleccionDeEstacion()
-        console.log("ingrese el numero de la estacion en la que vas")
-        let voyA = this.entradaDeOpciones()
-        let estacio2 = this.controlerMapa.buscadorEstacion(linea2, voyA)
+        let vamosA = this.entradaDeOpciones()
         console.log("\nBuscando la mejor ruta...\n");
-        return estacio2
+        return vamosA
     }
 
-    error() {
+    error(){
         console.log("Ingrese una opcion válida.")
     }
 

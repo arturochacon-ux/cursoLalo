@@ -8,16 +8,18 @@ export class ListasRutas {
     }
 
     agregarRuta(ruta: Linea[]) { 
-        if (ruta) {
-            this.listaRutas.push([...ruta])
+        if (ruta != undefined) {
+            this.listaRutas.push([...ruta]);
+            console.log(ruta)
         }
     }
 
-    rutaMasCorta(): Linea[]  {
+    rutaMasCorta() {
         let rutaCorta
         for (let i =0; i < this.listaRutas.length; i++){
-            rutaCorta = this.listaRutas[0]
-            if(rutaCorta.length > this.listaRutas[i].length){
+            rutaCorta = this.listaRutas[i]
+            console.log(this.listaRutas[i].length)
+            if(this.listaRutas[i].length < rutaCorta.length){
                 rutaCorta = this.listaRutas[i]
                 
             }
@@ -25,7 +27,6 @@ export class ListasRutas {
         for(const j of rutaCorta){
             console.log(j.estacion)
         }
-        return rutaCorta
     }
     
 
