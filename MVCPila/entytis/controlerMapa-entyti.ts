@@ -1,8 +1,8 @@
-import { lineasDelMetro } from "..";
+import { lineasMetro } from "../doc";
 import { Linea } from "./linaDelMetro-entity";
 
 export class ControlerMapa{
-    estaciones = lineasDelMetro
+    estaciones = lineasMetro
 
     todasLasLaves(){
         for(let [key] of this.estaciones) {

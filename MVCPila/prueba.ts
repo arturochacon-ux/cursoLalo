@@ -1,4 +1,4 @@
-
+/*
 class listaRutasNodos {
 
     laMasLista: Punto[][];
@@ -135,5 +135,25 @@ domine driver disaning
 ddd
 
 modelado del dominio (base de datos)
+*/
+
+class Bucle {
+    i = 0
+    
+    bucle(parametro : number){
+        this.i++
+
+        console.log("estoy en " + this.i)
+        if (this.i == parametro) {
+            console.log("he llegado a " + parametro)
+            return
+        }else {
+            this.bucle(parametro)
+        }
+
+    }
+}
 
 
+let miapp = new Bucle()
+miapp.bucle(9)

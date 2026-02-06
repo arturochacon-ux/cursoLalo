@@ -56,7 +56,7 @@ export class Control {
 
                     let posiblesRutas = new ListasRutas()
                     this.todasEstaciones.obtenObjeto(key)?.mejorRuta(this.todasEstaciones.obtenObjeto(key2), new Array(), new Map<string, Linea>(), posiblesRutas)
-                    console.log("esta es la mejor rutaaaa XD" )
+                    console.log("esta es la mejor ruta XD" )
                     posiblesRutas.rutaMasCorta()
                     break;
 

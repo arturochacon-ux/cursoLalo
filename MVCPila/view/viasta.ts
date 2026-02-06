@@ -46,15 +46,6 @@ export class Menu {
         return this.entradaDeOpciones()
     }
 
-
-
-
-
-
-
-
-
-
     entradaDeOpciones() {
         let numero = this.validaciones.validarSoloNumeros(scanf("%d"))
         while (numero == undefined) {

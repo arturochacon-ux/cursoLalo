@@ -1,0 +1,24 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var historial_entity_1 = require("./entity/historial-entity");
+var alumno_entity_1 = require("./entity/alumno-entity");
+var enum_calificaciones_1 = require("./enum/enum-calificaciones");
+var enum_grado_1 = require("./enum/enum-grado");
+var enum_materias_1 = require("./enum/enum-materias");
+var historial = new historial_entity_1.Historial();
+var juan = new alumno_entity_1.Alumno("juan", "banano", "10/11/20", "jb00", historial);
+var cajeto = new alumno_entity_1.Alumno("cajeto", "corona", "15/01/21", "cns", historial);
+var pacman = new alumno_entity_1.Alumno("pacman", "loco", "12/05/21", "pz48", historial);
+pacman.agragarNotas(enum_grado_1.Grado.Primero, enum_materias_1.Materia.Espaniol, enum_calificaciones_1.Calificacion.Siete);
+pacman.agragarNotas(enum_grado_1.Grado.Primero, enum_materias_1.Materia.Historia, enum_calificaciones_1.Calificacion.Ocho);
+pacman.agragarNotas(enum_grado_1.Grado.Primero, enum_materias_1.Materia.Fisica, enum_calificaciones_1.Calificacion.Nueve);
+juan.agragarNotas(enum_grado_1.Grado.Primero, enum_materias_1.Materia.Espaniol, enum_calificaciones_1.Calificacion.Diez);
+juan.agragarNotas(enum_grado_1.Grado.Primero, enum_materias_1.Materia.Historia, enum_calificaciones_1.Calificacion.Diez);
+juan.agragarNotas(enum_grado_1.Grado.Primero, enum_materias_1.Materia.Fisica, enum_calificaciones_1.Calificacion.Diez);
+juan.agragarNotas(enum_grado_1.Grado.Primero, enum_materias_1.Materia.Matematicas, enum_calificaciones_1.Calificacion.Siete);
+cajeto.agragarNotas(enum_grado_1.Grado.Segundo, enum_materias_1.Materia.Fisica, enum_calificaciones_1.Calificacion.Diez);
+historial.promedioPorGrado("jb00", enum_grado_1.Grado.Primero);
+historial.mostrarAlumnos();
+var alumno0 = new alumno_entity_1.Alumno("pepe", "pelotas", "18/09/2020", "pplotas09", historial);
+alumno0.mostrarInfoAlumno();
+//historial.busacadorDeAlumnos("pplotas09")
