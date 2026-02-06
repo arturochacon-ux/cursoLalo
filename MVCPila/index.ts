@@ -2,7 +2,9 @@
 import { Control } from "./controler/controller";
 import { Linea } from "./entytis/linaDelMetro-entity";
 
-
+let control =new Control()
+control.iniciar() 
+/*
 //linea cafe 9 
 let tacubaya = new Linea("Tacubaya");
 let patriotismo = new Linea("Patriotismo");
@@ -485,14 +487,10 @@ lineasDelMetro.set(12, [
     culhuacan, atlalilco, ejeCentral, ermita, mexicaltzingo, parqueDeLosVenados, zapata, hospital20Nov, insurgentesSur, mixcoac
 ]);
 
-
-
-
-
 let control = new Control();
 control.iniciar()
 
-/*
+
 const lineasMetro = {
     L1: ["Observatorio", "Tacubaya", "Juanacatlán", "Chapultepec", "Sevilla", "Insurgentes", "Cuauhtémoc", "Balderas", "Salto del Agua", "Isabel la Católica", "Pino Suárez", "Merced", "Candelaria", "San Lázaro", "Moctezuma", "Balbuena", "Boulevard Puerto Aéreo", "Gómez Farías", "Zaragoza", "Pantitlán"],
     L2: ["Cuatro Caminos", "Panteones", "Tacuba", "Cuitláhuac", "Popotla", "Colegio Militar", "Normal", "San Cosme", "Revolución", "Hidalgo", "Bellas Artes", "Allende", "Zócalo", "Pino Suárez", "San Antonio Abad", "Chabacano", "Viaducto", "Xola", "Villa de Cortés", "Nativitas", "Portales", "Ermita", "General Anaya", "Taxqueña"],
@@ -531,3 +529,4 @@ function generarRedCompleta() {
     });
 }
 */
+

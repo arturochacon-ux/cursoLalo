@@ -31,9 +31,9 @@ export class Creador {
                 let estaciones = this.linea.get(key)
                 for (let k of estaciones) {
                     let objeto = new Linea(k)
-                    console.log("ya cree " + objeto.estacion)
+                    //console.log("ya cree " + objeto.estacion)
                     if (this.todoMetro.has(objeto.estacion) == true) {
-                        console.log("ya existe " + objeto.estacion + " en el mapa")
+                        //console.log("ya existe " + objeto.estacion + " en el mapa")
                     } else {
 
                         this.todoMetro.set(objeto.estacion, objeto)
@@ -81,15 +81,19 @@ export class Creador {
             console.log("linea " + i)
 
     }
-    getAllEstaciones(key: number): string[] | undefined {
+    getEstaciones(key: number): string[] | undefined {
         return this.linea.get(key)
+    }
+
+    obtenObjeto(nombre : string) {
+        return this.todoMetro.get(nombre)
     }
 
     buscadorEstacion(key: number, estacion : number): string | undefined{
         let linea = this.linea.get(key)
         if (linea) {
         for (let i = 0; i < linea.length; i++){
-            if (estacion-1 == i ){
+            if ( i == estacion-1 ){
                 console.log(linea[i])
                 return linea[i]
             }
@@ -97,9 +101,6 @@ export class Creador {
     }
     }
 }
-let crea = new Creador(lineasMetro)
-crea.creaobjetos()
-crea.conectaEstaciones()
-crea.mostrarEstaciones()
-crea.inprimeLlaves()
-crea.buscadorEstacion(2, 10)
+
+
+
